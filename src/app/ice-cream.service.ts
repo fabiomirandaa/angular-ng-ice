@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -5,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class IceCreamService {
+  constructor(private httpClient: HttpClient) {}
+
   getIceCreams(): Observable<any[]> {
-    return;
+    return this.httpClient.get<any[]>('api/icecreams');
   }
 }
