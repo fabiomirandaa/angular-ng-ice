@@ -1,0 +1,13 @@
+.card {
+    align-items: center;
+  }
+  
+.card-img-top {
+  width: 300px;
+}
+  
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
