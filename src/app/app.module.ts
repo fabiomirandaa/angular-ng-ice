@@ -7,6 +7,8 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { IceCreamCardComponent } from './ice-cream-card/ice-cream-card.component';
 
 @NgModule({
   imports: [
@@ -17,7 +19,7 @@ import { TitleComponent } from './title/title.component';
       dataEncapsulation: false
     })
   ],
-  declarations: [AppComponent, TitleComponent],
+  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
