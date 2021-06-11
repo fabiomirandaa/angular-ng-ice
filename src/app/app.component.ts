@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IceCreamService } from './ice-cream.service';
+import { IceCream } from './models/icecream';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,12 @@ import { IceCreamService } from './ice-cream.service';
 })
 export class AppComponent {
   title = 'Ng Ice';
-  iceCreams: any[];
+  iceCreams: IceCream[];
 
   constructor(private iceCreamService: IceCreamService) {
     this.iceCreamService.getIceCreams().subscribe(items => {
       this.iceCreams = items;
+      console.log(this.iceCreams);
     });
   }
 }

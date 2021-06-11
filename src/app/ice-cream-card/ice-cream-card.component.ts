@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IceCream } from '../models/icecream';
 
 @Component({
   selector: 'app-ice-cream-card',
@@ -6,9 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./ice-cream-card.component.css']
 })
 export class IceCreamCardComponent implements OnInit {
-  @Input() title: string; 
-  @Input() description: string;
-  @Input() imageSrc: string;
+  @Input() iceCream: IceCream;
 
   constructor() { }
 

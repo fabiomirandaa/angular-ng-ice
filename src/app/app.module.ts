@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IceCreamCardComponent } from './ice-cream-card/ice-cream-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { IceCreamCardComponent } from './ice-cream-card/ice-cream-card.component
       dataEncapsulation: false
     })
   ],
-  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent],
+  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent, FooterComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
