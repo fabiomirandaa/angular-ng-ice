@@ -1,0 +1,29 @@
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Bem-vindo ao Ng Ice!</h1>
+        <p class="lead text-muted">
+          O e-commerce de sorvetes nº 1 da América Latina. Possuímos os mais
+          diversos e deliciosos sorvetes para entrega imediata em sua casa!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <app-ice-cream-type-section
+        title="Sorvetes"
+        [type]="iceCreamType.Sorvete"
+        [iceCreams]="iceCreams">
+      </app-ice-cream-type-section>
+
+      <app-ice-cream-type-section
+        title="Sorbets"
+        [type]="iceCreamType.Sorbet"
+        [iceCreams]="iceCreams">
+      </app-ice-cream-type-section>
+    </div>
+  </div>
+</main>

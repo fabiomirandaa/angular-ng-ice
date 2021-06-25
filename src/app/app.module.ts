@@ -10,17 +10,22 @@ import { TitleComponent } from './title/title.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IceCreamCardComponent } from './ice-cream-card/ice-cream-card.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { IceCreamDetailComponent } from './ice-cream-detail/ice-cream-detail.component';
+import { IceCreamTypeSectionComponent } from './ice-cream-type-section/ice-cream-type-section.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    AppRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
     })
   ],
-  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent, FooterComponent],
+  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent, FooterComponent, HomeComponent, IceCreamDetailComponent, IceCreamTypeSectionComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

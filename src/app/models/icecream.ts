@@ -1,9 +1,9 @@
-enum IceCreamType {
+export enum IceCreamType {
     Sorbet = 'sorbet',
     Sorvete = 'sorvete'
 }
 
-enum IceCreamCategory {
+export enum IceCreamCategory {
     Vegano = 'vegano',
     Tradicional = 'tradicional'
 }
