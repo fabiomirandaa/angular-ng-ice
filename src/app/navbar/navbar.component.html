@@ -26,9 +26,11 @@
           class="form-control me-2"
           type="search"
           [placeholder]="searchPlaceholder"
+          [(ngModel)]="searchTerm"
+          [ngModelOptions]="{standalone: true}"
           aria-label="Search"
         />
-        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+        <button (click)="search()" class="btn btn-outline-light" type="submit">Pesquisar</button>
       </form>
     </div>
   </div>

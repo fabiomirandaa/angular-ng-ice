@@ -4,6 +4,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const icecreams = [
       {
+        id: 0,
         name: 'Pineapple Passionfruit',
         description:
           'Sorvete de abacaxi com pedaços de abacaxi e calda de maracujá',
@@ -18,6 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
         quantity: 50
       },
       {
+        id: 1,
         name: 'Berry Berry Extraordinary®',
         description: 'Sorvete de mirtilo (blueberry), framboesa e amora',
         calories: 170,
@@ -31,6 +33,7 @@ export class InMemoryDataService implements InMemoryDbService {
         quantity: 50
       },
       {
+        id: 2,
         name: 'Chocolate Therapy',
         description: 'Sorvete sabor chocolate com cookie sabor chocolate',
         calories: 170,
@@ -44,6 +47,7 @@ export class InMemoryDataService implements InMemoryDbService {
         quantity: 50
       },
       {
+        id: 3,
         name: 'Vanilla',
         description: 'Sorvete sabor baunilha',
         calories: 170,

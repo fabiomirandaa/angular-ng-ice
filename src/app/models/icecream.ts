@@ -9,6 +9,7 @@ export enum IceCreamCategory {
 }
 
 export interface IceCream {
+    id: number;
     calories: number;
     category: IceCreamCategory;
     description: string;
