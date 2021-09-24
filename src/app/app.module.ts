@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IceCreamDetailComponent } from './ice-cream-detail/ice-cream-detail.component';
 import { IceCreamTypeSectionComponent } from './ice-cream-type-section/ice-cream-type-section.component';
+import { QuantityDescriptionPipe } from './price-description/quantity-description.pipe';
 
 @NgModule({
   imports: [
@@ -25,7 +26,7 @@ import { IceCreamTypeSectionComponent } from './ice-cream-type-section/ice-cream
       dataEncapsulation: false
     })
   ],
-  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent, FooterComponent, HomeComponent, IceCreamDetailComponent, IceCreamTypeSectionComponent],
+  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent, FooterComponent, HomeComponent, IceCreamDetailComponent, IceCreamTypeSectionComponent, QuantityDescriptionPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

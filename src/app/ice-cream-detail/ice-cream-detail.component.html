@@ -1,24 +1,29 @@
-<div class="container py-5 bg-light">
+<div *ngIf="icecream" class="container py-5 bg-light">
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
       <div class="card">
         <img
-          [src]="icecream?.image"
+          [src]="icecream.image"
           class="card-img-top"
-          [alt]="icecream?.name"
+          [alt]="icecream.name"
         />
       </div>
     </div>
     <div class="col">
-      <h1 class="fw-light">{{icecream?.name}}</h1>
+      <h1 class="fw-light">{{icecream.name}}</h1>
       <p class="lead text-muted">
-        {{icecream?.description}}
+        {{icecream.description}}
       </p>
       <h1 class="card-title pricing-card-title">
-        R${{ icecream?.price }}<small class="text-muted fw-light">/un</small>
+        {{ icecream.price | currency : 'BRL' }}<small class="text-muted fw-light">/un</small>
       </h1>
-      <a class="btn btn-lg btn-primary mt-4" href="#" role="button"
-        >Adicionar ao Carrinho</a
+
+      <h4>
+        {{ icecream.quantity | quantityDescription }}
+      </h4>
+
+      <button [disabled]="icecream.quantity === 0" class="btn btn-lg btn-primary mt-4" href="#" role="button"
+        >Adicionar ao Carrinho</button
       >
     </div>
   </div>

@@ -16,7 +16,7 @@ export class InMemoryDataService implements InMemoryDbService {
         image:
           'https://www.benandjerry.com.br/files/live/sites/systemsite/files/flavors/products/us/bulk/pineapple-passionfruit-sorbet-bulk-detail.png',
         price: 10,
-        quantity: 50
+        quantity: 0
       },
       {
         id: 1,
@@ -30,7 +30,7 @@ export class InMemoryDataService implements InMemoryDbService {
         image:
           'https://www.benandjerry.com.br/files/live/sites/systemsite/files/flavors/products/us/bulk/berry-berry-sorbet-bulk-detail.png',
         price: 10,
-        quantity: 50
+        quantity: 1
       },
       {
         id: 2,
