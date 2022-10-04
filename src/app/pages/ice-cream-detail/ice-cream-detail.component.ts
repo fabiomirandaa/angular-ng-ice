@@ -1,5 +1,5 @@
-import { IceCream } from './../models/icecream';
-import { IceCreamService } from './../ice-cream.service';
+import { IceCream } from '../../models/icecream';
+import { IceCreamService } from '../../ice-cream.service';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';

@@ -1,7 +1,6 @@
-import { IceCream } from './models/icecream';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { IceCream } from './models/icecream';
 
 @Injectable({
   providedIn: 'root',

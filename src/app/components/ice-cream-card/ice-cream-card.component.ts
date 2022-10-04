@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IceCream } from '../models/icecream';
+import { IceCream } from 'src/app/models/icecream';
+
 
 @Component({
   selector: 'app-ice-cream-card',

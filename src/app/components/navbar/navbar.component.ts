@@ -1,7 +1,7 @@
-import { IceCream } from './../models/icecream';
-import { IceCreamService } from './../ice-cream.service';
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { IceCreamService } from "src/app/ice-cream.service";
+
 
 @Component({
   selector: 'app-navbar',

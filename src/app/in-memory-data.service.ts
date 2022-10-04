@@ -56,7 +56,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ingredients:
           'creme de leite, leite condensado, água, açúcar, gema de ovo, aromatizantes, espessantes goma guar, carragena',
         image:
-          'https://www.benandjerry.com.br/files/live/sites/systemsite/files/flavors/products/us/bulk/vanilla-bulk-detail.png',
+          'https://www.benandjerry.com.br/files/live/sites/systemsite/files/flavors/products/us/bulk/pineapple-passionfruit-sorbet-bulk-detail.png',
         price: 10,
         quantity: 50
       }

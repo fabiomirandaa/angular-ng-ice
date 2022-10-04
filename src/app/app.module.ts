@@ -1,20 +1,20 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { IceCreamCardComponent } from "./components/ice-cream-card/ice-cream-card.component";
+import { IceCreamTypeSectionComponent } from "./components/ice-cream-type-section/ice-cream-type-section.component";
+import { QuantityDescriptionPipe } from "./components/price-description/quantity-description.pipe";
+import { TitleComponent } from "./components/title/title.component";
+import { InMemoryDataService } from "./in-memory-data.service";
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { IceCreamDetailComponent } from "./pages/ice-cream-detail/ice-cream-detail.component";
 
-import { AppComponent } from './app.component';
-import { TitleComponent } from './title/title.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { IceCreamCardComponent } from './ice-cream-card/ice-cream-card.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { AppRoutingModule } from './app-routing.module';
-import { IceCreamDetailComponent } from './ice-cream-detail/ice-cream-detail.component';
-import { IceCreamTypeSectionComponent } from './ice-cream-type-section/ice-cream-type-section.component';
-import { QuantityDescriptionPipe } from './price-description/quantity-description.pipe';
 
 @NgModule({
   imports: [

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IceCreamService } from '../ice-cream.service';
-import { IceCream, IceCreamType } from '../models/icecream';
+import { IceCreamService } from '../../ice-cream.service';
+import { IceCream, IceCreamType } from '../../models/icecream';
 
 @Component({
   selector: 'app-home',

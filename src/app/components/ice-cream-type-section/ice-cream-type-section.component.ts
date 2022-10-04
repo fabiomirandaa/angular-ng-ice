@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IceCream, IceCreamType } from '../models/icecream';
+import { IceCreamType, IceCream } from 'src/app/models/icecream';
+
 
 @Component({
   selector: 'app-ice-cream-type-section',
