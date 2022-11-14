@@ -8,12 +8,13 @@ import { AppComponent } from "./app.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { IceCreamCardComponent } from "./components/ice-cream-card/ice-cream-card.component";
 import { IceCreamTypeSectionComponent } from "./components/ice-cream-type-section/ice-cream-type-section.component";
+import { NavbarComponent } from "./components/navbar/navbar.component";
 import { QuantityDescriptionPipe } from "./components/price-description/quantity-description.pipe";
 import { TitleComponent } from "./components/title/title.component";
 import { InMemoryDataService } from "./in-memory-data.service";
-import { NavbarComponent } from "./components/navbar/navbar.component";
-import { HomeComponent } from "./pages/home/home.component";
-import { IceCreamDetailComponent } from "./pages/ice-cream-detail/ice-cream-detail.component";
+import { CheckoutComponent } from './features/checkout/checkout.component';
+import { HomeComponent } from "./features/home/home.component";
+import { IceCreamDetailComponent } from "./features/ice-cream-detail/ice-cream-detail.component";
 
 
 @NgModule({
@@ -26,7 +27,17 @@ import { IceCreamDetailComponent } from "./pages/ice-cream-detail/ice-cream-deta
       dataEncapsulation: false
     })
   ],
-  declarations: [AppComponent, TitleComponent, NavbarComponent, IceCreamCardComponent, FooterComponent, HomeComponent, IceCreamDetailComponent, IceCreamTypeSectionComponent, QuantityDescriptionPipe],
+  declarations: [
+    AppComponent,
+    TitleComponent,
+    NavbarComponent,
+    IceCreamCardComponent,
+    FooterComponent,
+    HomeComponent,
+    IceCreamDetailComponent,
+    IceCreamTypeSectionComponent,
+    QuantityDescriptionPipe,
+    CheckoutComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
