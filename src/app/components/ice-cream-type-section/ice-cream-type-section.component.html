@@ -4,7 +4,6 @@
     <div class="row row-cols-1 row-cols-md-2 g-4">
       <ng-container *ngFor="let iceCream of iceCreams">
         <app-ice-cream-card
-          [routerLink]="'/ice-cream/'+ iceCream?.id"
           *ngIf="iceCream.type === type"
           [iceCream]="iceCream"
         ></app-ice-cream-card

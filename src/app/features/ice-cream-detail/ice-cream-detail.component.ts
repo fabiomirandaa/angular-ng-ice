@@ -1,4 +1,4 @@
-import { IceCream } from '../../models/icecream';
+import { IceCream } from '../../models/icecream.interface';
 import { IceCreamService } from '../../ice-cream.service';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';

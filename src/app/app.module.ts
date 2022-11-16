@@ -15,7 +15,12 @@ import { InMemoryDataService } from "./in-memory-data.service";
 import { CheckoutComponent } from './features/checkout/checkout.component';
 import { HomeComponent } from "./features/home/home.component";
 import { IceCreamDetailComponent } from "./features/ice-cream-detail/ice-cream-detail.component";
-
+import { environment } from "src/environments/environment";
+import { IceCreamEffect } from "./+state/ice-cream.effects";
+import { IceCreamReducer } from "./+state/ice-cream.reducers";
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   imports: [
@@ -25,7 +30,13 @@ import { IceCreamDetailComponent } from "./features/ice-cream-detail/ice-cream-d
     AppRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
-    })
+    }),
+    StoreModule.forRoot({ iceCreamState: IceCreamReducer }),
+    StoreDevtoolsModule.instrument({
+        maxAge: 25,
+        logOnly: environment.production,
+    }),
+    EffectsModule.forRoot([IceCreamEffect]),
   ],
   declarations: [
     AppComponent,

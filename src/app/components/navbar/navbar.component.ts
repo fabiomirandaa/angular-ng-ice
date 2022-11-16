@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { Store } from "@ngrx/store";
+import { selectIceCreamsCartCount } from "src/app/+state/ice-cream.reducers";
 import { IceCreamService } from "src/app/ice-cream.service";
 
 
@@ -10,11 +12,13 @@ import { IceCreamService } from "src/app/ice-cream.service";
 })
 export class NavbarComponent implements OnInit {
   searchTerm: string;
+  countCart$ = this.store.select(selectIceCreamsCartCount);
   @Input() searchPlaceholder: string = 'Pesquisar Sorvete';
 
   constructor(
     private iceCreamService: IceCreamService,
-    private router: Router
+    private router: Router,
+    private store: Store
   ) {}
 
   ngOnInit() {}

@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { getIceCreams } from 'src/app/+state/ice-cream.actions';
+import { selectIceCreams } from 'src/app/+state/ice-cream.reducers';
 import { IceCreamService } from '../../ice-cream.service';
-import { IceCream, IceCreamType } from '../../models/icecream';
+import { IceCream, IceCreamType } from '../../models/icecream.interface';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-
+export class HomeComponent implements OnInit {
   title = 'Ng Ice';
-  iceCreams: IceCream[];
+  iceCreams = this.store.select(selectIceCreams);
 
   readonly iceCreamType = IceCreamType;
 
-  constructor(private iceCreamService: IceCreamService) {
-    this.iceCreamService.getIceCreams().subscribe(items => {
-      this.iceCreams = items;
-      console.log(this.iceCreams);
-    });
+  constructor(private store: Store) {
+  }
+
+  ngOnInit(): void {
+      this.store.dispatch(getIceCreams())
   }
 }

@@ -16,13 +16,13 @@
       <app-ice-cream-type-section
         title="Sorvetes"
         [type]="iceCreamType.Sorvete"
-        [iceCreams]="iceCreams">
+        [iceCreams]="iceCreams | async">
       </app-ice-cream-type-section>
 
       <app-ice-cream-type-section
         title="Sorbets"
         [type]="iceCreamType.Sorbet"
-        [iceCreams]="iceCreams">
+        [iceCreams]="iceCreams | async">
       </app-ice-cream-type-section>
     </div>
   </div>

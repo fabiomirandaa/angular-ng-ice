@@ -1,17 +1,21 @@
 <div class="col">
   <div class="card">
     <img
+      [routerLink]="'/ice-cream/'+ iceCream?.id"
       [src]="iceCream.image"
       width="200"
       height="300"
       class="card-img-top"
       alt="Pineapple Passionfruit"
     />
-    <div class="card-body">
+    <div
+    [routerLink]="'/ice-cream/'+ iceCream?.id"
+    class="card-body">
       <h5 class="card-title">{{ iceCream.name }}</h5>
       <p class="card-text">
         {{ iceCream.description }}
       </p>
     </div>
+    <button class="btn btn-primary mb-3" (click)="addInCart(iceCream)">Adicionar ao carrinho</button>
   </div>
 </div>

@@ -18,7 +18,14 @@
           <a class="nav-link active" aria-current="page" href="#">Sorvetes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="checkout">Carrinho</a>
+          <a class="nav-link position-relative" routerLink="checkout">Carrinho
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+            {{countCart$ | async}}
+              <span class="visually-hidden">Itens no carrinho</span>
+            </span>
+          </a>
         </li>
       </ul>
       <form class="d-flex">

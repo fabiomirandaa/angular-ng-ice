@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IceCreamType, IceCream } from 'src/app/models/icecream';
-
+import { IceCreamType, IceCream } from 'src/app/models/icecream.interface';
 
 @Component({
   selector: 'app-ice-cream-type-section',
@@ -11,7 +10,7 @@ export class IceCreamTypeSectionComponent implements OnInit {
 
   readonly iceCreamType = IceCreamType;
   @Input() title: string;
-  @Input() iceCreams: IceCream[];
+  @Input() iceCreams: IceCream[] | null;
   @Input() type: IceCreamType;
 
   ngOnInit(): void {

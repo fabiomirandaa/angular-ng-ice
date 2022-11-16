@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IceCream } from 'src/app/models/icecream';
+import { Store } from '@ngrx/store';
+import { addIceCream } from 'src/app/+state/ice-cream.actions';
+import { IceCream } from 'src/app/models/icecream.interface';
 
 
 @Component({
@@ -10,9 +12,13 @@ import { IceCream } from 'src/app/models/icecream';
 export class IceCreamCardComponent implements OnInit {
   @Input() iceCream: IceCream;
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit() {
+  }
+
+  addInCart(iceCream: IceCream) {
+    this.store.dispatch(addIceCream({iceCream}))
   }
 
 }
